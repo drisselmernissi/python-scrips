@@ -14,5 +14,6 @@ df.loc[3,'gender'] = 12
 print("\nAprès modification :")
 print(df.head())
 
+print("from commit ")
 # Étape 3 : Enregistrer les données modifiées dans un nouveau fichier Excel
 df.to_excel('nouveau_exemple.xlsx', index=False)
