@@ -1,0 +1,18 @@
+import pandas as pd
+
+# Étape 1 : Charger le fichier Excel
+df = pd.read_excel(r'C:\Users\delmerni\.ipython\Book2.xlsx') 
+
+# Afficher les premières lignes du DataFrame
+print("Avant modification :")
+print(df.head())
+
+# Étape 2 : Effectuer quelques opérations (par exemple, doubler les valeurs de la colonne 'Valeur')
+df.loc[2,'City'] = 32
+df.loc[3,'gender'] = 12
+# Afficher les premières lignes après modification
+print("\nAprès modification :")
+print(df.head())
+
+# Étape 3 : Enregistrer les données modifiées dans un nouveau fichier Excel
+df.to_excel('nouveau_exemple.xlsx', index=False)
